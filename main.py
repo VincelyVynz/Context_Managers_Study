@@ -15,9 +15,6 @@ class Open_File():
         self.file.close()
 
 
-
-# youtube link ; https://youtu.be/-aKFBoZpiqA?t=335
-
 with Open_File('testfile.txt', 'w') as file:
     print("file is closed" if file.closed is True else "file is open")
     file.write("Testing...")
