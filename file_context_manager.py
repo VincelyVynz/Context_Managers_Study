@@ -1,4 +1,4 @@
-class File_Context_Manager():
+class FileContextManager():
     def __init__(self, filename, mode):
         self.filename = filename
         self.mode = mode
@@ -11,9 +11,9 @@ class File_Context_Manager():
         self.file.close()
 
 
-with File_Context_Manager("testfile.txt", "r") as file:
+with FileContextManager("testfile.txt", "r") as file:
     content = file.read()
     print(content)
 
-with File_Context_Manager("testfile.txt", "a") as file:
+with FileContextManager("testfile.txt", "a") as file:
     new_content = file.write("\n Add a new line")
