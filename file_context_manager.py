@@ -14,3 +14,6 @@ class File_Context_Manager():
 with File_Context_Manager("testfile.txt", "r") as file:
     content = file.read()
     print(content)
+
+with File_Context_Manager("testfile.txt", "a") as file:
+    new_content = file.write("\n Add a new line")
